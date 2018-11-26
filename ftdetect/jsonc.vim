@@ -1,2 +1,2 @@
-au BufNewFile,BufRead *.cjson setfiletype jsonc
-au BufNewFile,BufRead coc-settings.json setfiletype jsonc
+autocmd BufNewFile,BufRead *.cjson setlocal filetype=jsonc
+autocmd BufNewFile,BufRead coc-settings.json setlocal filetype=jsonc
