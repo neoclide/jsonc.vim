@@ -7,6 +7,10 @@ endif
 syn region  jsoncString    start=+"+  skip=+\\\\\|\\"+  end=+"+  contains=jsoncEscape
 syn region  jsoncString    start=+'+  skip=+\\\\\|\\'+  end=+'+  contains=jsoncEscape
 
+" Syntax: JSON Keywords {{{1
+" Separated into a match and region because a region by itself is always greedy
+syn match  jsoncKeywordMatch /"\([^"]\|\\\"\)\+"[[:blank:]\r\n]*\:/ contains=jsonKeyword
+
 " Syntax: Escape sequences
 syn match   jsoncEscape    "\\["\\/bfnrt]" contained
 syn match   jsoncEscape    "\\u\x\{4}" contained
@@ -44,6 +48,7 @@ hi def link jsoncBoolean            Boolean
 hi def link jsoncLineComment        Comment
 hi def link jsoncComment            Comment
 hi def link jsoncNumError           Error
+hi def link jsoncKeywordMatch       Label
 
 if !exists('b:current_syntax')
   let b:current_syntax = 'jsonc'
