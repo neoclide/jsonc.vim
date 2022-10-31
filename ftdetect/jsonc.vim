@@ -7,6 +7,6 @@ autocmd BufNewFile,BufRead .jshintrc setlocal filetype=jsonc
 autocmd BufNewFile,BufRead .jslintrc setlocal filetype=jsonc
 autocmd BufNewFile,BufRead .mocharc.json setlocal filetype=jsonc
 autocmd BufNewFile,BufRead coffeelint.json setlocal filetype=jsonc
-autocmd BufNewFile,BufRead tsconfig.json setlocal filetype=jsonc
+autocmd BufNewFile,BufRead tsconfig*.json setlocal filetype=jsonc
 autocmd BufNewFile,BufRead jsconfig.json setlocal filetype=jsonc
 autocmd BufNewFile,BufRead */.vscode/*.json setlocal filetype=jsonc
